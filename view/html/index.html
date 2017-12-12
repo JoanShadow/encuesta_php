@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Encuesta</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+	<div id="cont_padre" class="container">
+
+		<header id="cabecera">
+			<h1 class="titulo_cabecera">encuesta</h1>
+		</header>
+
+		<section id="seccion" class="col-xs-8">
+
+			<form id="encuesta_form" action="../../controller/controller.php" method="POST">
+
+				<p>
+
+					<label for="asunto">Asunto</label>
+
+					<input id="asunto" class="form-control" type="text" name="asunto" placeholder="Asunto.." required />
+
+				</p>
+
+				<p>
+
+					<label for="fecha">Fecha</label>
+
+					<input id="fecha" class="form-control" type="date" name="fecha" required />
+
+				</p>
+
+				<p>
+
+					<label for="edad">Edad</label>
+
+					<input id="edad" class="form-control" type="number" name="edad" required />
+
+				</p>
+
+				<label for="sexo">Sexo</label>
+
+				<p id="sexo">
+
+					<label for="hombre">Hombre</label><input id="hombre" class="form-control" type="radio" name="sexo" value="hombre" required />
+
+					<label for="mujer">Mujer</label><input id="mujer" class="form-control" type="radio" name="sexo" value="mujer" required />
+
+				</p>
+
+				<p>
+
+					<label for="opinion">Opinión</label>
+
+					<textarea id="opinion" class="form-control" name="opinion" placeholder="Escribe aquí tu opinión.." required></textarea>
+
+				</p>
+
+				 <p>
+
+					<label for="color">Color favorito</label>
+
+					<select id="color" class="form-control" name="color" required>
+
+						<label for="rojo">Rojo</label><option id="rojo" value="rojo" name="rojo">Rojo</option>
+
+						<label for="verde">Verde</label><option id="verde" value="verde" name="verde">Verde</option>
+
+						<label for="azul">Azul</label><option id="azul" value="azul" name="azul">Azul</option>
+
+						<label for="amarillo">Amarillo</label><option id="amarillo" value="amarillo" name="amarillo">Amarillo</option>
+
+					</select>
+
+				</p>
+
+				<label for="marcas">Marcas que conoces</label>
+
+				<p id="marcas">
+
+					<label for="naik">Naik</label><input id="naik" class="form-control" type="checkbox" name="marcas[]" value="naik" />
+
+					<label for="pmua">Pmua</label><input id="pmua" class="form-control" type="checkbox" name="marcas[]" value="pmua" />
+
+					<label for="adidos">Adidos</label><input id="adidos" class="form-control" type="checkbox" name="marcas[]" value="adidos" />
+
+					<label for="salamon">Salamon</label><input id="salamon" class="form-control" type="checkbox" name="marcas[]" value="salamon" />
+
+					<label for="kechua">Kechua</label><input id="kechua" class="form-control" type="checkbox" name="marcas[]" value="kechua" />
+
+				</p>
+
+				<input id="btn_success" type="submit" name="submit" value="Enviar" class="btn btn-success">
+
+			</form>
+
+		</section>
+
+	</div>
+
+</body>
+</html>
